@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <!--<meta http-equiv="Content-type" content="text/html; charset="utf-8">-->
+    <meta http-equiv="content-language" content="tr-TR" />
+    <meta http-equiv="content-type" content=”text/html; charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - Temco Mühendislik - Makine-Otomasyon-Yazılım</title>
+
+    <meta name="description" content="Makine otomasyon yazılım, üretim hatlarının bakımı, yazılım, ihtiyaca uygun programlar, bakım hizmeti, LED tabela yapımı, elektrik elektronik bakımlar">
+    <meta name="author" content="">
+    <!-- styles -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="../../static/app/assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="../../static/app/assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="../../static/app/assets/css/docs.css" rel="stylesheet">
+    <link href="../../static/app/assets/css/prettyPhoto.css" rel="stylesheet">
+    <link href="../../static/app/assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../../static/app/assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+    <link href="../../static/app/assets/css/flexslider.css" rel="stylesheet">
+    <link href="../../static/app/assets/css/sequence.css" rel="stylesheet">
+    <link href="../../static/app/assets/css/style.css" rel="stylesheet">
+    <link href="../../static/app/assets/color/default.css" rel="stylesheet">
+
+
+
+    <!-- fav and touch icons -->
+    <link rel="shortcut icon" href="../../static/app/assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../static/app/assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../static/app/assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../static/app/assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../../static/app/assets/ico/apple-touch-icon-57-precomposed.png">
+    <!--<link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.min.css' %}" />-->
+    <!--<link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />-->
+    <!--<script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>-->
+</head>
+
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+    <header>
+        {% include 'app/_navbarpartial.html' %}
+    </header>
+
+
+    {% block content %}{% endblock %}
+
+    <hr />
+
+    {% include 'app/_footerpartial.html' %}
+
+
+
+    <!-- JavaScript Library Files -->
+    <script src="../../static/app/assets/js/jquery.min.js"></script>
+    <script src="../../static/app/assets/js/jquery.easing.js"></script>
+    <script src="../../static/app/assets/js/google-code-prettify/prettify.js"></script>
+    <script src="../../static/app/assets/js/modernizr.js"></script>
+    <script src="../../static/app/assets/js/bootstrap.js"></script>
+    <script src="../../static/app/assets/js/jquery.elastislide.js"></script>
+    <script src="../../static/app/assets/js/sequence/sequence.jquery-min.js"></script>
+    <script src="../../static/app/assets/js/sequence/setting.js"></script>
+    <script src="../../static/app/assets/js/jquery.prettyPhoto.js"></script>
+    <script src="../../static/app/assets/js/application.js"></script>
+    <script src="../../static/app/assets/js/jquery.flexslider.js"></script>
+    <script src="../../static/app/assets/js/hover/jquery-hover-effect.js"></script>
+    <script src="../../static/app/assets/js/hover/setting.js"></script>
+
+    <!-- Template Custom JavaScript File -->
+    <script src="../../static/app/assets/js/custom.js"></script>
+    <script src="{% static 'app/scripts/respond.js' %}"></script>
+    <script>
+
+        $('li').each(function () {
+            if (window.location.href.indexOf($(this).find('a:first').attr('href')) > -1) {
+                $(this).addClass('active').siblings().removeClass('active');
+            }
+        });
+    </script>
+    {% block scripts %}
+
+    {% endblock %}
+
+</body>
+</html>
+

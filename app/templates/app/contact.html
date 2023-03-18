@@ -1,0 +1,104 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<section id="subintro">
+    <div class="jumbotron subhead" id="overview">
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div class="centered">
+                        <h3>TEMCO Mühendislik</h3>
+                        <p>
+                            Elektrik, Mekanik ve Yazılımsal çözümler için buradayız.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="maincontent">
+    <div class="container">
+        <div class="row">
+            <div class="span4">
+                <aside>
+                    <div class="widget">
+                        <h4>Bize Ulaşmak Çok Kolay</h4>
+                        <ul>
+                            <li>
+                                <label><strong>Telefon : </strong></label>
+                                <p>                                    
+                                    <a class="telefon-ara-btn" href="tel:+905517252373"><i class="fa fa-phone" aria-hidden="true"></i> +90 (551) 725 2373</a>
+                                </p>
+                            </li>
+                            <li>
+                                <label><strong>Email : </strong></label>
+                                <p>
+                                    
+                                    <a class="telefon-ara-btn" href="email:info@temco.com"><i class="fa fa-phone" aria-hidden="true"></i> info@temco.com</a>
+
+                                </p>
+                            </li>
+                            <li>
+                                <label><strong>Adres : </strong></label>
+                                <p>
+                                    İSTASYON MAH. ÇİLEM SK. KARTEPE SANAYİ SİTESİ E BLOK, D:NO:217, NO:1E İÇ KAPI, 41250 Kocaeli
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="widget">
+                        <h4>Sosyal Ağlar</h4>
+                        <ul class="social-links">
+                            <li><a href="#" title="Twitter"><i class="icon-rounded icon-32 icon-twitter"></i></a></li>
+                            <li><a href="#" title="Facebook"><i class="icon-rounded icon-32 icon-facebook"></i></a></li>
+                            <li><a href="#" title="Google plus"><i class="icon-rounded icon-32 icon-google-plus"></i></a></li>
+                            <li><a href="#" title="Linkedin"><i class="icon-rounded icon-32 icon-linkedin"></i></a></li>
+                            <li><a href="#" title="Pinterest"><i class="icon-rounded icon-32 icon-pinterest"></i></a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+            <div class="span8">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12090.178777698788!2d30.0349066!3d40.7500431!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3f2cc08909f37932!2zVEVNQ08gTcOcSEVORMSwU0zEsEsgTUFLxLBORSBPVE9NQVNZT04gWUFaSUxJTSBTQU4uVkUgVMSwQy4gTFRELiDFnlTEsC4!5e0!3m2!1sen!2str!4v1672507110244!5m2!1sen!2str" width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="spacer30"></div>
+
+                <div id="sendmessage">Mesajınız başarıyla gönderildi. Teşekkür ederiz!</div>
+                <div id="errormessage"></div>
+                <form action="" method="post" role="form" class="contactForm">
+                    <div class="row">
+                        <div class="span4 form-group">
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Adınız" data-rule="minlen:4"
+                                   data-msg="Please enter at least 4 chars" />
+                            <div class="validation"></div>
+                        </div>
+
+                        <div class="span4 form-group">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Email" data-rule="email"
+                                   data-msg="Please enter a valid email" />
+                            <div class="validation"></div>
+                        </div>
+                        <div class="span8 form-group">
+                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Konu" data-rule="minlen:4"
+                                   data-msg="Please enter at least 8 chars of subject" />
+                            <div class="validation"></div>
+                        </div>
+                        <div class="span8 form-group">
+                            <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us"
+                                      placeholder="Mesajınız.."></textarea>
+                            <div class="validation"></div>
+                            <div class="text-center">
+                                <button class="btn btn-color btn-rounded" type="submit">Mesaj Gönder</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

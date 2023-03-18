@@ -1,0 +1,18 @@
+{% load static %}
+
+<div class="pagination">
+    <!--<span class="step-links">-->
+        <ul>
+            {% if page_obj.has_previous %}
+            <li><a href="?blog=1">&laquo; first</a></li>
+            <li><a href="?blog={{ page_obj.previous_page_number }}">previous</a></li>
+            {% endif %}
+            <li class="active"><a href="?page={{ page_obj.number }}">{{ page_obj.number }}</a></li>
+            {% if page_obj.has_next %}
+            <li><a href="?blog={{ page_obj.next_page_number }}">next</a></li>
+            <li><a href="?blog={{ page_obj.paginator.num_pages }}">last &raquo;</a></li>
+            {% endif %}
+        </ul>
+    <!--</span>-->
+</div>
+

@@ -1,0 +1,50 @@
+{% extends "app/layout.html" %}
+{% load static %}
+
+{% block content %}
+<section id="subintro">
+    <div class="jumbotron subhead" id="overview">
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div class="centered">
+                        <h3>TEMCO Mühendislik</h3>
+                        <p>
+                            Elektrik, Mekanik ve Yazılımsal çözümler için buradayız.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container">
+    <!-- Docs nav
+    ================================================== -->
+    <div class="row">
+        <div class="span3 bs-docs-sidebar">
+            <ul class="nav nav-list bs-docs-sidenav">
+                {% for hizmet in hizmetler %}
+                <li><a href="#{{ hizmet.slug }}"><i class="icon-chevron-right"></i>{{ hizmet.name }}</a></li>
+                {% endfor %}               
+            </ul>
+        </div>
+        <div class="span9">
+            <!-- Global Bootstrap settings
+            ================================================== -->
+            {% for hizmet in hizmetler %}
+            <section id="{{ hizmet.slug }}" class="doc">
+                <div class="page-header">
+                    <h3>{{ hizmet.name }}</h3>
+                </div>
+                <div>
+                    <img style="height:300px; width:720px" src="{{ hizmet.image.url }}" />
+                </div>
+                <hr />
+               {{ hizmet.description|safe }}
+            </section>
+            {% endfor %}          
+        </div>
+    </div>
+</div>
+{% endblock %}

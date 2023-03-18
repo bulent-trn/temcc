@@ -1,0 +1,15 @@
+
+<h4>Katagoriler</h4>
+<ul class="cat">
+    {% for category in categories %}
+    {% if category.slug == selected_category %}
+    <li>
+        <a style="color:yellowgreen" href="{% url 'blogs_by_category' category.slug %}">{{ category.name|title }}</a>
+    </li>
+    {% else %}
+    <li>
+        <a href="{% url 'blogs_by_category' category.slug %}">{{ category.name|title }}</a>
+    </li>
+    {% endif %}
+    {% endfor %}
+</ul>

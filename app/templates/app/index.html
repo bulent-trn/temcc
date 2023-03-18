@@ -1,0 +1,181 @@
+{% extends "app/layout.html" %}
+
+
+{% block content %}
+
+<section id="intro">
+    <div class="jumbotron masthead">
+        <div class="container">
+            <!--slider navigation-->
+            <div class="sequence-nav">
+                <div class="prev">
+                    <span></span>
+                </div>
+                <div class="next">
+                    <span></span>
+                </div>
+            </div>
+            <!--end slider navigation-->
+            <div class="row">
+                <div class="span12">
+                    <div id="slider_holder">
+                        <div id="sequence">
+                            <ul>
+                                <!--Layer 1-->
+                                <li>
+                                    <div class="info animate-in">
+                                        <h2>Temco Mühendislik</h2>
+                                        <br>
+                                        <h3>Makina Otomasyon ve Yazılım</h3>
+                                        <p>
+                                            İşinizi kolaylaştıracak çözümler burada.
+
+                                            <strong>Mekanik, Elektrik ve Yazılım</strong> desteklerimizden faydalanmak için iletişime geçin.
+                                        </p>
+                                        <a class="btn btn-success" href="{% url 'hizmetlerimiz' %}">Daha Fazlası İçin &raquo;</a>
+                                        <a class="btn btn-success" href="#">Daha Hızlı iletişim için &raquo; Whatsapp 0551 721 5373 </a>
+                                    </div>
+                                    <img class="slider_img animate-in" src="../../static/app/assets/img/slides/sequence/img-11.gif" alt="">
+                                </li>
+                                <!--Layer 2-->
+                                <li>
+                                    <div class="info">
+                                        <h2>Temco Mühendislik</h2>
+                                        <br>
+                                        <h3>Makina Otomasyon ve Yazılım</h3>
+                                        <p>
+                                            Üretim bandları ve paketleme servisleri için mekanik - elektrik bakımlar ve size özel çözümler ile yanınızdayız.
+                                        </p>
+                                        <a class="btn btn-success" href="{% url 'hizmetlerimiz' %}">Daha Fazlası İçin &raquo;</a>
+                                        <a class="btn btn-success" href="#">Daha Hızlı iletişim için &raquo; Whatsapp 0551 721 5373 </a>
+                                    </div>
+                                    <img class="slider_img" src="../../static/app/assets/img/slides/sequence/img-6.png" alt="">
+                                </li>
+                                <!--Layer 3-->
+                                <li>
+                                    <div class="info">
+                                        <h2>Temco Mühendislik</h2>
+                                        <br>
+                                        <h3>Makina Otamasyon ve Yazılım</h3>
+                                        <p>
+                                            Daha verimli üretim bandı optimizasyonları için iletişim kurabilirsiniz.
+                                        </p>
+                                        <a class="btn btn-success" href="{% url 'hizmetlerimiz' %}">Daha Fazlası İçin &raquo;</a>
+                                        <a class="btn btn-success" href="#">Daha Hızlı iletişim için &raquo; Whatsapp 0551 721 5373 </a>
+                                    </div>
+                                    <img class="slider_img" src="../../static/app/assets/img/slides/sequence/img-7.png" alt="">
+                                </li>
+                                <li>
+                                    <div class="info">
+                                        <h2>Temco Mühendislik</h2>
+                                        <br>
+                                        <h3>Makina Otamasyon ve Yazılım</h3>
+                                        <p>
+                                            İç mekan ve dış mekan LED Paneller ile daha görünür olacak ve hedef kitlenize daha da yakınlaşacaksınız.
+                                        </p>
+                                        <a class="btn btn-success" href="{% url 'hizmetlerimiz' %}">Daha Fazlası İçin &raquo;</a>
+                                        <a class="btn btn-success" href="#">Daha Hızlı iletişim için &raquo; Whatsapp 0551 721 5373 </a>
+                                    </div>
+                                    <img class="slider_img" src="../../static/app/assets/img/slides/sequence/img-10.png" alt="">
+                                </li>
+                                <li>
+                                    <div class="info">
+                                        <h2>Temco Mühendislik</h2>
+                                        <br>
+                                        <h3>Makina Otamasyon ve Yazılım</h3>
+                                        <p>
+                                            Dinamik Web Siteler ve sosyal medya yönetimi ile sizi dünyaya tanıtmaya hazırız.
+                                        </p>
+                                        <p>
+                                            İhtiyacınıza uygun masaüstü ve mobil uygulamalar ile işleriniz daha da kolay hale gelecek.
+                                        </p>
+                                        <a class="btn btn-success" href="{% url 'hizmetlerimiz' %}">Daha Fazlası İçin &raquo;</a>
+                                        <a class="btn btn-success" href="#">Daha Hızlı iletişim için &raquo; Whatsapp 0507 370 1288 </a>
+                                    </div>
+                                    <img class="slider_img" src="../../static/app/assets/img/slides/sequence/img-2.gif" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--Sequence Slider::END-->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="maincontent">
+    <div class="container">
+        <div class="row">
+            <div class="span3 features">
+                <i class="icon-circled icon-32 icon-suitcase left active"></i>
+                <h4>Çözüm Odaklı</h4>
+                <div class="dotted_line">
+                </div>
+                <p class="left">
+                    İhtiyaçlarınızın doğru tespiti, maliyet açısından büyük önem taşır. İhtiyacınızı belirleyip, teknik destek sonrasında ek maliyetler çıkarmayacak gerçek çözümler üretiriz.
+                </p>
+                <a href="{% url 'hizmetlerimiz' %}">Daha Fazlası</a>
+            </div>
+            <div class="span3 features">
+                <i class="icon-circled icon-32 icon-plane left active"></i>
+                <h4>Tasarım ve Uygulamalar</h4>
+                <div class="dotted_line">
+                </div>
+                <p class="left">
+                    İsteklerinize cevap verebilecek modern tasarımlar daha uzun ömürlü ve verimli olacaktır. Gerek işlerinizi Web ortamında tanıtmak gerekse üretim hattınızda ihtiyaç duyduğunuz teknik destek <strong>TEMCO</strong> da.
+                </p>
+                <a href="{% url 'hizmetlerimiz' %}">Daha Fazlası</a>
+            </div>
+            <div class="span3 features">
+                <i class="icon-circled icon-32 icon-leaf left active"></i>
+                <h4>Enerji & Zamanda Verim</h4>
+                <div class="dotted_line">
+                </div>
+                <p class="left">
+                    Gelişen teknolojiden bağımsız üretim yapmak neredeyse olanaksızdır. Teknolojiye ayak uydurarak daha karlı bir duruma geçersiniz. Çözümlerimiz daima gelecek teknolojilerle entegre halindedir.
+
+                </p>
+                <a href="{% url 'hizmetlerimiz' %}">Daha Fazlası</a>
+            </div>
+            <div class="span3 features">
+                <i class="icon-circled icon-32 icon-wrench left active"></i>
+                <h4>Teknik Destek</h4>
+                <div class="dotted_line">
+                </div>
+                <p class="left">
+                    Ayakta kalmak için sağlam yol arkadaşlarına ihtiyacınız olacaktır. İhtiyacınız için tekliflerimize bakmak için ne bekliyorsunuz? Biz buradayız.
+                </p>
+                <a href="{% url 'hizmetlerimiz' %}">Daha Fazlası</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span12">
+                <div class="tagline centered">
+                    <div class="row">
+                        <div class="span12">
+                            <div class="tagline_text">
+                                <h2>Hazır Projelerimiz &amp; Ürünlerimiz</h2>
+                                <p>
+                                    Üretim Bantları, Paketleme Makinaları, İç ve Dış Mekan Led Tabelalar, Masaüstü ve web programları, İos-Android uygulamaları
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        {% include 'app/_productpartial.html' %}
+
+
+        <div class="row">
+            <div class="span12">
+                <div class="tagline centered"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

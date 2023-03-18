@@ -1,0 +1,133 @@
+{% extends "app/layout.html" %}
+
+
+{% block content %}
+
+<section id="subintro">
+    <div class="jumbotron subhead" id="overview">
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div class="centered">
+                        <h3>TEMCO Mühendislik</h3>
+                        <p>
+                            Elektrik, Mekanik ve Yazılımsal çözümler için buradayız.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="maincontent">
+    <div class="container">
+        <div class="row">
+            <div class="span4">
+                <div class="well">
+                    <div class="centered">
+                        <i class="icon-circled icon-64 icon-suitcase active"></i>
+                        <h4>Entegrasyon</h4>
+                        <div class="dotted_line">
+                        </div>
+                        <p>
+                            Birçok modülden oluşan sistemlerin uyum  içerisinde, bütünleşik olarak çalışabilmesi için entegre edilebilir modüllerden oluşması gerekir.  Böylece sistemi yönetebilmek de daha kolay olur. <span>TEMCO</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="span4">
+                <div class="well">
+                    <div class="centered">
+                        <i class="icon-circled icon-64 icon-leaf active"></i>
+                        <h4>Yeniliklere Açık</h4>
+                        <div class="dotted_line">
+                        </div>
+                        <p>
+                            Problemleri yenilikçi yaklaşım ve tekniklerle çözmek zamana ayak uydurmayı ve teknolojiyi takip etmeyi gerektirir. <span>TEMCO</span> sizlere yenilikçi yaklaşımlarla entegre çözümler sunuyor.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="span4">
+                <div class="well">
+                    <div class="centered">
+                        <i class="icon-circled icon-64 icon-coffee active"></i>
+                        <h4>Sağlam Ekip</h4>
+                        <div class="dotted_line">
+                        </div>
+                        <p>
+                            Sahip olduğumuz tecrübeli personelimiz ile gerek mekanik, elektrik ve yazılımsal bütün problemlerinize çözüm sunuyoruz. Uzman teknik personelimizden teknik bilgi ve destek almak için bize ulaşın. <span>TEMCO</span> 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span12">
+                <div class="divider">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span12">
+                <h4>Adım Adım TEMCO</h4>
+                <!-- start: Accordion -->
+                <div class="accordion" id="accordion2">
+                    {% for item in kurumsals %}
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle active" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                                <i class="icon-minus"></i> Kuruluşumuz hakkında
+                            </a>
+                        </div>
+                        <div id="collapseOne" class="accordion-body collapse in">
+                            <div class="accordion-inner">
+                               {{ item.hakkinda|safe }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                                <i class="icon-plus"></i> Faaliyet alanlarımız nelerdir?
+                            </a>
+                        </div>
+                        <div id="collapseTwo" class="accordion-body collapse">
+                            <div class="accordion-inner">
+                                {{ item.faaliyetlerimiz|safe }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTree">
+                                <i class="icon-plus"></i> Nerede hizmet vermekteyiz?
+                            </a>
+                        </div>
+                        <div id="collapseTree" class="accordion-body collapse">
+                            <div class="accordion-inner">
+                                {{ item.neredeyiz|safe }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
+                                <i class="icon-plus"></i> Nasıl iletişime geçebiliriz?
+                            </a>
+                        </div>
+                        <div id="collapseFour" class="accordion-body collapse">
+                            <div class="accordion-inner">
+                                {{ item.iletisim_yollari|safe }}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <!--end: Accordion -->
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

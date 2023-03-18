@@ -1,0 +1,61 @@
+{% block footer %}
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="span4">
+                <div class="widget">
+                    <h5>Ne Aramıştınız?</h5>
+                    <ul class="regular">
+                        <li><a href="{% url 'hizmetlerimiz' %}">Üretim Bantları ve Paketleme</a></li>
+                        <li><a href="{% url 'hizmetlerimiz' %}">LED Tabela</a></li>
+                        <li><a href="{% url 'hizmetlerimiz' %}">Yazılım</a></li>
+                        <li><a href="{% url 'hizmetlerimiz' %}">Teknik Destek</a></li>
+                        <li><a href="{% url 'contact' %}">İletişim</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="span4">
+                <div class="widget">
+                    {% if last_four %}
+                    <h5>Öne Çıkan Blog Yazıları</h5>
+                    <ul class="regular">
+                        {% for i in last_four %}
+                        <li><a href="{% url 'blogdetails' i.slug %}">{{ i.title|title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="span4">
+                <div class="widget">
+                    <!-- logo -->
+                    <a class="brand logo" href="{% url 'home' %}">
+                        <img src="../../static/app/assets/img/Logo_04.png" width="230" height="500" alt="TEMCO Mühendislik" />
+                    </a>
+                    <!-- end logo -->
+                    <address>
+                        <strong style="color:forestgreen">TEMCO Mühendislik Otomasyon ve Yazılım</strong><br>
+                        İSTASYON MAH. ÇİLEM SK. KARTEPE SANAYİ SİTESİ E BLOK, D:NO:217, NO:1E İÇ KAPI, 41250 Kocaeli
+                        <br>
+                        <abbr title="Phone">P:</abbr> 0(551)7252373
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="verybottom">
+        <div class="container">
+            <div class="row">
+                <div class="span6">
+                    <p>&copy; {{ year }} - Temco Mühendislik</p>
+                </div>
+                <div class="span6">
+                    <div class="credits">
+                        Designed by <a href="#">blnt</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+{% endblock %}

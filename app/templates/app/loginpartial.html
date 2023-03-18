@@ -1,0 +1,15 @@
+{% load static %}
+{% if user.is_authenticated %}
+<form id="logoutForm" action="/logout/" method="post" class="navbar-right">
+    {% csrf_token %}
+    <ul class="nav topnav">
+        <li class="active"><a href="javascript:document.getElementById('logoutForm').submit()"> {{ user.username }} Çıkış</a></li>
+    </ul>
+</form>
+
+{% else %}
+
+<ul class="nav topnav">
+    <li><a href="{% url 'login' %}">Giriş</a></li>
+</ul>
+{% endif %}

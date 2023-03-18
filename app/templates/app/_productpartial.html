@@ -1,0 +1,72 @@
+{% load static %}
+
+
+
+{% for product in products %}
+{% if forloop.first %}
+<div class="row">
+    <div class="home-posts">
+        {% endif %}
+        <div class="span3">
+            {% if product.image2 %}
+            <div class="post-slider">
+                <!-- start flexslider -->
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li>
+                            <a href="{% url 'hizmetlerimiz' %}"><img src="{{ product.image.url }}" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="{% url 'hizmetlerimiz' %}"><img src="{{ product.image2.url }}" alt=""></a>
+                        </li>
+                        {% if product.image3 %}
+                        <li>
+                            <a href="{% url 'hizmetlerimiz' %}"><img src="{{ product.image3.url }}" alt=""></a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </div>
+                <!-- end flexslider -->
+            </div>
+            {% else %}
+            <div class="post-image">
+                <a href="{% url 'hizmetlerimiz' %}">
+                    <img src="{{ product.image.url }}" alt="">
+                </a>
+            </div>
+            {% endif %}
+            <div class="entry-meta">
+                <a href="#"><i class="bi bi-tools icon-square icon-48 left"></i></a>
+                <span class="date">
+                    {{ product.date_published }}
+                    <br>
+
+                </span>
+            </div>
+            <!--end .entry-meta-->
+            <div class="entry-body">
+                <a href="post_right_sidebar.html">
+                    <h5 class="title">{{ product.title }}</h5>
+                </a>
+                <p>
+                    {{ product.description|safe|striptags|slice:"0:150" }}
+                </p>
+            </div>
+            <!--end .entry-body-->
+            <div class="clear">
+            </div>
+        </div>
+        {% if forloop.counter|divisibleby:4 %}
+    </div>
+</div>
+<hr />
+<div class="row">
+    <div class="home-posts">
+        {% endif %}
+        {% if forloop.last %}
+    </div>
+</div>{% endif %}
+
+
+
+        {% endfor %}

@@ -1,0 +1,38 @@
+{% load static %}
+
+{% for portfolio in portfolios %}
+
+{% if forloop.first %}
+<div class="row">
+    <ul class="portfolio-area da-thumbs">
+        {% endif %}
+        <li class="portfolio-item2" data-id="id-0" data-type="web">
+            <div class="span3">
+                <div class="thumbnail">
+                    <div class="image-wrapp">
+                        <img src="{{ portfolio.image.url }}" alt="Portfolio name" title="" />
+                        <article class="da-animate da-slideFromRight" style="display: block;">
+                            <h4>{{ portfolio.name }}</h4>
+                            <a href="{% url 'portfoliodetail' portfolio.slug %}"><i class="icon-rounded icon-48 icon-link"></i></a>
+                            <span>
+                                <a class="zoom" data-pretty="prettyPhoto" href="{{ portfolio.image.url }}">
+                                    <i class="icon-rounded icon-48 icon-zoom-in"></i>
+                                </a>
+                            </span>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </li>
+        {% if forloop.counter|divisibleby:4 %}
+    </ul>
+</div>
+<div class="row">
+    <ul class="portfolio-area da-thumbs">
+        {% endif %}
+        {% if forloop.last %}
+    </ul>
+</div>
+
+{% endif %}
+{% endfor %}

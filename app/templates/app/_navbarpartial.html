@@ -1,0 +1,41 @@
+{% load static %}
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <!-- logo -->
+            <a class="brand logo" href="{% url 'home' %}">
+                <img src="../../static/app/assets/img/logo_04.png" width="230" height="500" alt="">
+            </a>
+            <!-- end logo -->
+            <!-- top menu -->
+            <div class="navigation">
+                <nav>
+                    {% include 'app/loginpartial.html' %}
+
+                    <ul class="nav topnav">
+                        <li class="dropdown active">
+                            <a href="{% url 'home' %}">Anasayfa</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="{% url 'hizmetlerimiz' %}">Hizmetlerimiz</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="{% url 'kurumsal' %}">Kurumsal</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="{% url 'portfolio' %}">Portfolio</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="{% url 'blog' %}">Blog</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="{% url 'contact' %}">İletişim</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- end menu -->
+        </div>
+    </div>
+</div>

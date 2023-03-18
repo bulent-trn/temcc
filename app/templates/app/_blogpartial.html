@@ -1,0 +1,32 @@
+{% load static %}
+
+
+<!-- start article -->
+<article class="blog-post">
+    <div class="post-heading">
+        <h3><a href="{% url 'blogdetails' blog.slug %}">{{ blog.title }}</a></h3>
+    </div>
+    <div class="row">
+        <div class="span3">
+            <div class="post-image">
+                <a href="{% url 'blogdetails' blog.slug %}"><img src="{{ blog.image.url }}" alt="" /></a>
+            </div>
+        </div>
+        <div class="span5">
+            <ul class="post-meta">
+                <li class="first"><i class="icon-calendar"></i><span>{{ blog.date_published }}</span></li>
+
+                <li><i class="icon-list-alt"></i><span><a href="#"> Yoruma Kapalı</a></span></li>
+
+                <li class="last"><i class="icon-tags"></i><span>{% for tag in blog.tags.all %}<a href="#">{{ tag.name }}-</a>{% endfor %}</span></li>
+            </ul>
+            <div class="clearfix">
+            </div>
+            <p>
+                {{ blog.description|striptags|slice:"0:150" }}
+            </p>
+            <a class="btn btn-small btn-success" href="{% url 'blogdetails' blog.slug %}">Daha Dazlası >></a>
+        </div>
+    </div>
+</article>
+<!-- end article -->
